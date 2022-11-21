@@ -32,10 +32,7 @@ public class PlayerTransporterService {
     public void moveToTowerDefence(List<String> playerIds, boolean inProgress) {
         ServerDiscoveryProto.ConnectableServer serverResponse = this.serverDiscoveryService.getSuggestedTowerDefenceServer(
                 ServerDiscoveryProto.TowerDefenceServerRequest.newBuilder()
-                        .setServerRequest(ServerDiscoveryProto.ServerRequest.newBuilder()
-                                .setPlayerCount(playerIds.size())
-                                .build()
-                        )
+                        .setPlayerCount(playerIds.size())
                         .setInProgress(inProgress)
                         .build());
 
